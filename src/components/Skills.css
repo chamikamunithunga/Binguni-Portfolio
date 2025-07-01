@@ -1,0 +1,377 @@
+.skills {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.skills-content {
+  margin-top: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.skill-category {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.skill-category h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border-radius: 1px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateX(5px);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.skill-icon {
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: #2c3e50;
+  flex-grow: 1;
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: #3498db;
+  font-size: 0.9rem;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border-radius: 4px;
+  transition: width 1.5s ease;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.certifications-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-section h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.certification-card {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-left-color: #2980b9;
+}
+
+.cert-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.cert-info h4 {
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.cert-info p {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.skills-summary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.skills-summary h3 {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.expertise-tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.expertise-tag:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation delays for skill categories */
+.skill-category:nth-child(1) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.skill-category:nth-child(2) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.skill-category:nth-child(3) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.skill-category:nth-child(4) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills {
+    padding: 6rem 0;
+  }
+
+  .skills-container {
+    padding: 0 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skill-category {
+    padding: 2rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2rem;
+  }
+
+  .certifications-section {
+    padding: 2.5rem;
+  }
+
+  .certifications-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .certification-card {
+    padding: 1.2rem;
+  }
+
+  .cert-icon {
+    font-size: 1.5rem;
+  }
+
+  .cert-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .cert-info p {
+    font-size: 0.8rem;
+  }
+
+  .skills-summary {
+    padding: 2.5rem;
+  }
+
+  .skills-summary h3 {
+    font-size: 1.5rem;
+  }
+
+  .expertise-tags {
+    gap: 0.8rem;
+  }
+
+  .expertise-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 4rem 0;
+  }
+
+  .skill-category {
+    padding: 1.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .skill-percentage {
+    font-size: 0.8rem;
+  }
+
+  .certifications-section {
+    padding: 2rem;
+  }
+
+  .certifications-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .certification-card {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .skills-summary {
+    padding: 2rem;
+  }
+
+  .skills-summary h3 {
+    font-size: 1.3rem;
+  }
+
+  .expertise-tags {
+    gap: 0.5rem;
+  }
+
+  .expertise-tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+} 

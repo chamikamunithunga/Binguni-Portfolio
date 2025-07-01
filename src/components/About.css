@@ -1,0 +1,268 @@
+.about {
+  padding: 8rem 0;
+  background: white;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.about-text .intro {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-item {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.02), transparent);
+  pointer-events: none;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left-color: #2980b9;
+}
+
+.highlight-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.highlight-item p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.certifications {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.certifications h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certifications li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.certifications li:last-child {
+  border-bottom: none;
+}
+
+.certifications li:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 1rem;
+  border-radius: 5px;
+}
+
+.about-values {
+  background: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 15px;
+  height: fit-content;
+}
+
+.about-values h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.values-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.value-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.value-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.value-item p {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 6rem 0;
+  }
+
+  .about-container {
+    padding: 0 1rem;
+  }
+
+  .about-text .intro {
+    font-size: 1.2rem;
+  }
+
+  .highlight-item {
+    padding: 1.5rem;
+  }
+
+  .certifications {
+    padding: 2rem;
+  }
+
+  .about-values {
+    padding: 2rem;
+  }
+
+  .about-values h3 {
+    font-size: 1.5rem;
+  }
+
+  .value-item {
+    padding: 1.2rem;
+  }
+
+  .value-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 4rem 0;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .about-highlights {
+    gap: 1.5rem;
+  }
+
+  .highlight-item {
+    padding: 1.2rem;
+  }
+
+  .highlight-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .certifications {
+    padding: 1.5rem;
+  }
+
+  .certifications h3 {
+    font-size: 1.3rem;
+  }
+
+  .certifications li {
+    font-size: 1rem;
+  }
+
+  .about-values {
+    padding: 1.5rem;
+  }
+
+  .value-item {
+    padding: 1rem;
+  }
+
+  .value-icon {
+    font-size: 1.8rem;
+  }
+
+  .value-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .value-item p {
+    font-size: 0.9rem;
+  }
+} 

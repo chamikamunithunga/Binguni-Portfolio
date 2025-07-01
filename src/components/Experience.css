@@ -1,0 +1,278 @@
+.experience {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #3498db, #2980b9);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 4rem 0;
+  width: 100%;
+}
+
+.timeline-item.left .timeline-content {
+  margin-right: 55%;
+  text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 55%;
+  text-align: left;
+}
+
+.timeline-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item.left .timeline-content::before {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: white;
+}
+
+.timeline-item.right .timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-right-color: white;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+  z-index: 2;
+}
+
+.company-info h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.company-info h4 {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.duration {
+  display: inline-block;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.achievements h5 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  color: #666;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.achievements li:hover {
+  color: #3498db;
+  transform: translateX(5px);
+}
+
+/* Animation */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.3s; }
+.timeline-item:nth-child(3) { animation-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+    padding: 6rem 0;
+  }
+
+  .experience-container {
+    padding: 0 1rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin: 0 0 0 70px;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-content::before,
+  .timeline-item.right .timeline-content::before {
+    left: -15px;
+    right: auto;
+    border-left-color: transparent;
+    border-right-color: white;
+  }
+
+  .timeline-marker {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    padding: 2rem;
+  }
+
+  .company-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .company-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 4rem 0;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-marker {
+    left: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 50px;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .company-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .company-info h4 {
+    font-size: 1rem;
+  }
+
+  .duration {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .achievements h5 {
+    font-size: 1rem;
+  }
+
+  .achievements li {
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .achievements li::before {
+    font-size: 1rem;
+  }
+} 
